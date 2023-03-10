@@ -19,7 +19,7 @@ export default {
     methods:{
         projectArray(currentPage){
             this.loading = true;
-            axios.get(`${this.store.baseUrl}/api/project`, { params:{'page': currentPage}}).then(response =>{
+            axios.get(`${this.store.baseUrl}/api/projects`, { params:{'page': currentPage}}).then(response =>{
                 if(response.data.success){
                     
                     this.projects = response.data.results.data;

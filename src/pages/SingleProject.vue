@@ -12,7 +12,7 @@ export default {
     },
     mounted(){
         this.loading = true;
-        axios.get(`${this.store.baseUrl}/api/project/${this.$route.params.titolo}`).then((response) =>{
+        axios.get(`${this.store.baseUrl}/api/projects/${this.$route.params.titolo}`).then((response) =>{
             if(response.data.success){
                 this.project = response.data.results;
                 this.loading = false;
@@ -34,7 +34,7 @@ export default {
         </div>
         <div class="row" v-else>
             <div class="col-12 my-3">
-                <router-link class="btn btn-sm btn-primary" :to="{ name: 'project'}">Torna Indietro</router-link>
+                <router-link class="btn btn-sm btn-primary" :to="{ name: 'projects'}">Torna Indietro</router-link>
             </div>
             <div class="col-12 mb-5">
                 <div class="card w-25">

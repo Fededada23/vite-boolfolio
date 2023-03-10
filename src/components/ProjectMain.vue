@@ -9,7 +9,7 @@ export default{
             loading: true,
             baseUrl: 'http://127.0.0.1:8000',
             
-            // per il PAGINATE
+     
             lastPage: null,
             currentPage: 1,
         }
