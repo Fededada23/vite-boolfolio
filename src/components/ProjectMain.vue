@@ -22,9 +22,9 @@ export default{
             this.loading = true;
             axios.get(`${this.baseUrl}/api/projects`, { params: { page: project_page }}).then((response) => {
                 if(response.data.success) {
-                    this.projects = response.data.projects.data
-                    this.currentPage = response.data.projects.current_page
-                    this.lastPage = response.data.projects.last_page
+                    this.projects = response.data.results.data
+                    this.currentPage = response.data.results.current_page
+                    this.lastPage = response.data.results.last_page
                     this.loading = false
                 }
                 else {
@@ -64,7 +64,7 @@ export default{
                         <li :class="currentPage === 1 ? 'disabled' : 'page-item'">
                             <button class="page-link" @click="getProjects(currentPage - 1)">Prev</button>
                         </li>
-                        <li :class="currentPage === i ? 'disabled' : 'page-item'" v-for="item in lastPage">
+                        <li :class="currentPage === i ? 'disabled' : 'page-item'" v-for="item in lastPage" :key="item.id">
                             <button class="page-link" @click="getProjects(item)">{{item}}</button>
                         </li>
                         <li :class="currentPage === lastPage ? 'disabled' : 'page-item'">
