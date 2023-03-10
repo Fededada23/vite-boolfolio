@@ -15,7 +15,7 @@ const router = createRouter({
             component: HomePage
         },
         {
-            path: '/blog',
+            path: '/project',
             name: 'project_list',
             component: ProjectList
         },
@@ -23,7 +23,7 @@ const router = createRouter({
 
         {
 
-            path: '/projects/:slug',
+            path: '/project/:slug',
             name: 'single-project',
             component: SingleProject
         },

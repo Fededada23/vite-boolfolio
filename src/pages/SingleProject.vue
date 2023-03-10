@@ -12,7 +12,7 @@ export default {
     },
     mounted(){
         this.loading = true;
-        axios.get(`${this.store.baseUrl}/api/projects/${this.$route.params.titolo}`).then((response) =>{
+        axios.get(`${this.store.baseUrl}/api/projects/${this.$route.params.slug}`).then((response) =>{
             if(response.data.success){
                 this.project = response.data.results;
                 this.loading = false;
