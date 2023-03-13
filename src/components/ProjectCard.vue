@@ -34,7 +34,7 @@ export default{
                 <p>
                     <em>
                         <strong>Technologies</strong>:
-                        <span class="badge bg-primary m-2" v-for="technology in projects.technologies" :key="technology.id">
+                        <span class="badge bg-primary m-2" v-for="technology in project.technologies" :key="technology.id">
                             {{technology.name}}
                         </span>
                     </em>
