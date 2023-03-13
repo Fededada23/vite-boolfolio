@@ -9,7 +9,7 @@ export default{
                     routeName: 'homepage',
                 },
                 {
-                    label: 'Project',
+                    label: 'Projects',
                     routeName: 'project_list',
                 },
             ]
