@@ -19,13 +19,13 @@ export default{
     <div class="card m-3">
         <div class="card-body">
             <div class="card-img-top">
-                <img :src="project.cover_image != null ? `${store.baseUrl}/storage/${project.cover_image}` : 'https://picsum.photos/200/300'" class="img-fluid" alt="">
+                <img :src="projects.cover_image != null ? `${store.baseUrl}/storage/${projects.cover_image}` : 'https://picsum.photos/200/300'" class="img-fluid" alt="">
             </div>
             <div class="card-title p-1">
-                <h5>{{ project.title }}</h5>
+                <h5>{{ projects.title }}</h5>
                 <p>
-                    <em v-if="project.type">
-                        <strong>Categoria</strong>: {{project.type.name}}
+                    <em v-if="projects.type">
+                        <strong>Categoria</strong>: {{projects.type.name}}
                     </em>
                     <em v-else>
                         Nessuna Categoria
@@ -34,12 +34,12 @@ export default{
                 <p>
                     <em>
                         <strong>Technologies</strong>:
-                        <span class="badge bg-primary m-2" v-for="technology in project.technologies" :key="technology.id">
+                        <span class="badge bg-primary m-2" v-for="technology in projects.technologies" :key="technology.id">
                             {{technology.name}}
                         </span>
                     </em>
                 </p>
-                <router-link :to="{ name: 'single-project', params: { slug: project.slug } }" class="btn btn-sm btn-success">Leggi l'articolo</router-link>
+                <router-link :to="{ name: 'single-project', params: { slug: projects.slug } }" class="btn btn-sm btn-success">Leggi l'articolo</router-link>
             </div>
         </div>
     </div>

@@ -15,6 +15,6 @@ export default {
  
 </template>
 
-<style scoped>
-
+<style lang="scss">
+@use './styles/app.scss' as *;
 </style>
